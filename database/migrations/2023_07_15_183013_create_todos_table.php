@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::connection('mongodb')->create('lists', function (Blueprint $table) {
+        Schema::connection('mongodb')->create('todos', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('list_id');
             $table->string('name');
             $table->string('description');
             $table->timestamps();
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::connection('mongodb')->dropIfExists('lists');
+        Schema::connection('mongodb')->dropIfExists('todos');
     }
 };
