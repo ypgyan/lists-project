@@ -10,4 +10,6 @@ class Todo extends Model
     use HasFactory;
 
     protected $connection = 'mongodb';
+
+    protected $guarded = [];
 }
