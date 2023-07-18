@@ -4,7 +4,7 @@ namespace App\Http\Requests\Api\Todos;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TodoCreateRequest extends FormRequest
+class TodoFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
